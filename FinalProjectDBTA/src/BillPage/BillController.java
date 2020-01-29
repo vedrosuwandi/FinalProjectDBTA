@@ -169,7 +169,7 @@ public class BillController extends DBConnect {
     }
 
     public Double TotalPrice(){
-        return subtotal() + Tax() + ServiceTax(); //-promo
+        return subtotal() + Tax() + ServiceTax() - (subtotal() * (discount() * 0.01));
     }
 
     public void back(ActionEvent event)throws IOException {
