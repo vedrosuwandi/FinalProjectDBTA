@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="600.0" style="-fx-background-color: #DAA520;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transaction.TransactionController">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="14.0" prefHeight="667.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="86.0" layoutX="246.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../luxury%20club.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d8a820" layoutX="470.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table" textAlignment="CENTER" wrappingWidth="78.22887802124023">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="Table" alignment="CENTER" editable="false" layoutX="492.0" layoutY="44.0" prefHeight="26.0" prefWidth="34.0" />
+            <SplitPane layoutY="89.0" prefHeight="578.0" prefWidth="563.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="577.0" prefWidth="558.0">
+                     <children>
+                        <TableView fx:id="Transaction" layoutX="27.0" prefHeight="266.0" prefWidth="506.0">
+                          <columns>
+                            <TableColumn fx:id="TransactionName" prefWidth="311.9999816417694" text="Name" />
+                            <TableColumn fx:id="TransactionQTY" prefWidth="95.199951171875" text="Qty" />
+                              <TableColumn fx:id="TransactionPrice" prefWidth="97.60009765625" text="Price" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="TransactionPromo" layoutX="27.0" layoutY="266.0" prefHeight="131.0" prefWidth="506.0">
+                          <columns>
+                            <TableColumn fx:id="TransactionPromoName" prefWidth="411.20002365112305" text="Promo" />
+                            <TableColumn fx:id="TransactionPercentage" prefWidth="92.00006103515625" text="Percentage" />
+                          </columns>
+                        </TableView>
+                        <Text fill="#d8a820" layoutX="329.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub Total : " textAlignment="CENTER" wrappingWidth="78.22887802124023">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="SubTotal" fill="#d8a820" layoutX="426.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="108.62890243530273">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#d8a820" layoutX="341.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total     : " textAlignment="CENTER" wrappingWidth="66.22887802124023">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Total" fill="#d8a820" layoutX="426.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="108.62890243530273">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#d8a820" layoutX="341.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change : " textAlignment="CENTER" wrappingWidth="66.22887802124023">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Change" fill="#d8a820" layoutX="431.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="108.62890243530273">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#d8a820" layoutX="34.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax 10%     : " textAlignment="CENTER" wrappingWidth="86.39999999999986">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Tax" fill="#d8a820" layoutX="134.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="108.62890243530273">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#d8a820" layoutX="14.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Service Tax 7% : " textAlignment="CENTER" wrappingWidth="108.62890243530273">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Service" fill="#d8a820" layoutX="134.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="108.62890243530273">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="25.0" layoutY="535.0" mnemonicParsing="false" onAction="#Order" prefHeight="26.0" prefWidth="86.0" text="Order" />
+                        <Button fx:id="Pay" disable="true" layoutX="453.0" layoutY="535.0" mnemonicParsing="false" onAction="#pay" prefHeight="26.0" prefWidth="86.0" text="Pay" />
+                        <Text fill="#d8a820" layoutX="341.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash :" textAlignment="RIGHT" wrappingWidth="55.19998779296873">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="Cash" layoutX="421.0" layoutY="500.0" prefHeight="26.0" prefWidth="118.0" />
+                        <Text fill="#d8a820" layoutX="25.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Promo : " textAlignment="CENTER" wrappingWidth="94.39999999999986">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="TotalPromo" fill="#d8a820" layoutX="134.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="108.62890243530273">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="25.0" layoutY="500.0" mnemonicParsing="false" onAction="#PromoList" prefHeight="26.0" prefWidth="86.0" text="Add Promo" />
+                        <Button fx:id="ViewBill" disable="true" layoutX="237.0" layoutY="535.0" mnemonicParsing="false" onAction="#ViewBill" prefHeight="26.0" prefWidth="86.0" text="View Bill" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <Button layoutX="21.0" layoutY="20.0" mnemonicParsing="false" onAction="#refresh" prefHeight="51.0" prefWidth="66.0" text="Load Price" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

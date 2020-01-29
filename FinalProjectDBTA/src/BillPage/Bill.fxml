@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="439.0" style="-fx-background-color: #DAA520;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BillPage.BillController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="24.0" prefHeight="701.0" prefWidth="406.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="86.0" layoutX="160.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../luxury%20club.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d8a820" layoutX="18.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table" wrappingWidth="87.20001220703125">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="Staff" fill="#d8a820" layoutX="156.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="87.20001220703125">
+               <font>
+                  <Font size="17.0" />
+               </font></Text>
+            <Text fx:id="Date" layoutX="145.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.34199523925781" />
+            <Text fill="#d8a820" layoutX="329.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bill" textAlignment="RIGHT" wrappingWidth="59.080078125">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="BillNo" fill="#d8a820" layoutX="333.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="52.14198303222656">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <TableView fx:id="Bill" layoutX="20.0" layoutY="140.0" prefHeight="334.0" prefWidth="368.0">
+              <columns>
+                <TableColumn fx:id="Qty" prefWidth="55.200016021728516" text="QTY" />
+                <TableColumn fx:id="Description" prefWidth="211.99998474121094" text="Description" />
+                  <TableColumn fx:id="Price" prefWidth="99.99993896484375" text="Price" />
+              </columns>
+            </TableView>
+            <Text fill="#d8a820" layoutX="19.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub Total : " />
+            <Text fx:id="SubTotal" layoutX="292.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="94.13671875" />
+            <Text fill="#d8a820" layoutX="19.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Service 7% : " wrappingWidth="67.88006591796875" />
+            <Text fx:id="Service" layoutX="292.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="94.13671875" />
+            <Text fill="#d8a820" layoutX="19.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax 10% : " wrappingWidth="67.88006591796875" />
+            <Text fx:id="Tax" layoutX="292.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="94.13671875" />
+            <Text fill="#d8a820" layoutX="19.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total : " wrappingWidth="67.88006591796875" />
+            <Text fx:id="Total" layoutX="292.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="94.13671875" />
+            <Text fill="#d8a820" layoutX="19.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pay : " wrappingWidth="67.88006591796875" />
+            <Text fx:id="Pay" layoutX="292.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="94.13671875" />
+            <Text fill="#d8a820" layoutX="19.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change : " wrappingWidth="67.88006591796875" />
+            <Text fx:id="Change" layoutX="292.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="94.13671875" />
+            <Line endX="305.4000244140625" layoutX="101.0" layoutY="627.0" startX="-100.0" stroke="#d8a820" />
+            <Text fill="#d8a820" layoutX="144.0" layoutY="671.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank You">
+               <font>
+                  <Font name="AvantGarde-Medium" size="22.0" />
+               </font>
+            </Text>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" text="Back" />
+            <TextField fx:id="Table" editable="false" layoutX="20.0" layoutY="105.0" prefHeight="26.0" prefWidth="41.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

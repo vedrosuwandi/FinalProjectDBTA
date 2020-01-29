@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="594.0" style="-fx-background-color: #DAA520;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Promo.PromoController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="28.0" prefHeight="353.0" prefWidth="551.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="66.0" layoutX="242.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../luxury%20club.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="423.0" layoutY="312.0" mnemonicParsing="false" onAction="#usePromo" text="Use Promo" />
+            <TableView fx:id="Promo" layoutX="50.0" layoutY="80.0" prefHeight="224.0" prefWidth="450.0">
+               <columns>
+                  <TableColumn fx:id="PromoID" prefWidth="55.20001220703125" text="ID" />
+                  <TableColumn fx:id="PromoName" prefWidth="296.7999725341797" text="Promo" />
+                  <TableColumn fx:id="PromoPercentage" prefWidth="98.4000244140625" text="Percentage" />
+               </columns>
+            </TableView>
+            <Button layoutX="50.0" layoutY="312.0" mnemonicParsing="false" onAction="#Bill" prefHeight="26.0" prefWidth="114.0" text="Bill" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+    FXMLLoader loader = new FXMLLoader();
+    loader.setLocation(getClass().getResource("Menu.fxml"));
+    Parent MenuPage = loader.load();
+
+    // Passing object user to the MainPageController class
+    MenuController control = loader.getController();
+    control.initdata(user);
+
+    // Gets stage's info and setting it up
+    Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    stage.setResizable(false);
+    stage.setScene(new Scene(MenuPage));
+    stage.setTitle("Shoproject");
+    stage.show();
+
+
+    Parent LoginParent = FXMLLoader.load(getClass().getResource("Login.fxml"));
+    Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    stage.setTitle("LoginPage");
+    stage.setScene(new Scene(LoginParent));
+    stage.show();
