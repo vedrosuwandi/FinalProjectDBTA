@@ -133,5 +133,19 @@ public class DBConnect {
         }
         return flag;
     }
-
+    
+     public Integer discount(){
+        String query = "select Percentage from UsedPromo";
+        Integer discount = 0;
+        try{
+            statement = connect.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+            if(rs.next()){
+                discount = rs.getInt(1);
+            }
+        }catch (SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+        return discount;
+    }
 }
